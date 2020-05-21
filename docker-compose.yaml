@@ -1,0 +1,12 @@
+version: '2'
+services:
+  bash:
+    image: smpiano/test-vsftp-server
+    build: .
+    entrypoint: /bin/bash
+    volumes:
+      - "sharedfolder:/home/matu/Downloads/win/"
+
+volumes:
+  sharedfolder:
+    external: true
